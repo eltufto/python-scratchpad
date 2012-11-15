@@ -10,4 +10,3 @@ def modulem1(self):
 
 def modulem2(self):
     return "result2"
-
