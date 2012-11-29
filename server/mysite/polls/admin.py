@@ -15,5 +15,10 @@ class PollAdmin(admin.ModelAdmin):
     list_filter = ['pub_date']
     search_fields = ['question']
     date_hierarchy = 'pub_date'
+    
+class ChoiceAdmin(admin.ModelAdmin):
+    choice = 'choice'
+    votes = 'votes'
 
+admin.site.register(Choice, ChoiceAdmin)
 admin.site.register(Poll, PollAdmin)

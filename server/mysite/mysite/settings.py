@@ -122,6 +122,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'polls',
     'job_files',
+    'dummyjobfile',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
