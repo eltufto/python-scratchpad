@@ -37,14 +37,3 @@ class GUIUserPromptBinary(UserPromptBase):
             return True
         else:
             return False
-    
-#    def response(self, cmd):
-#        dialog = Gtk.MessageDialog(cmd, None, 0,
-#                            (Gtk.STOCK_NO, Gtk.ResponseType.NO,
-#                             Gtk.STOCK_YES, Gtk.ResponseType.YES))
-#        response = dialog.run()
-#        dialog.destroy()
-#        if response == Gtk.ResponseType.YES:
-#            return True
-#        else:
-#            return False
