@@ -1,6 +1,6 @@
 import runsuite
 import logging
-from user_prompt import CmdLineUserPromptBinary
+from interaction.harness import cmdline_interaction
 
 def main():
     
@@ -8,7 +8,7 @@ def main():
     DATEFMT = '%Y-%m-%d %I:%M:%S %p'
     logging.basicConfig(level=logging.DEBUG, format=FORMAT, datefmt=DATEFMT)
 
-    runsuite.run(CmdLineUserPromptBinary())
+    runsuite.run(cmdline_interaction)
 
 if __name__ == "__main__":
     main()

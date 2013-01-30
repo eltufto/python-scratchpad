@@ -1,15 +1,8 @@
-import abc
 from gi.repository import Gtk
 from distutils.util import strtobool
+from modes_base import QuestionBase
 
-class UserPromptBase(object):
-    __metaclass__ = abc.ABCMeta
-    
-    @abc.abstractmethod
-    def response(self, cmd):
-        pass
-
-class CmdLineUserPromptBinary(UserPromptBase):    
+class CmdLineBinaryQuestion(QuestionBase):
     def response(self, cmd):
         while True:
             response = raw_input("RESPONSE REQUIRED: " 
@@ -22,8 +15,7 @@ class CmdLineUserPromptBinary(UserPromptBase):
                 print "Sorry, not a valid choice.  Try again..."
         return bool_response
     
-class GUIUserPromptBinary(UserPromptBase):
-   
+class GUIBinaryQuestion(QuestionBase):
     def response(self, cmd):
         dialog = Gtk.MessageDialog(None, 
                                    Gtk.DialogFlags.MODAL,

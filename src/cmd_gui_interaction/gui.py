@@ -2,7 +2,7 @@ import os
 import sys
 import runsuite
 import logging
-from user_prompt import GUIUserPromptBinary
+from interaction.harness import gui_interaction
 from cStringIO import StringIO
 from gi.repository import Gtk, GObject
 from subprocess import Popen, PIPE
@@ -62,7 +62,7 @@ class MyTab(Gtk.VBox):
         return True
         
     def _go(self, _):
-        runsuite.run(GUIUserPromptBinary())
+        runsuite.run(gui_interaction)
 
 def main():
     """
